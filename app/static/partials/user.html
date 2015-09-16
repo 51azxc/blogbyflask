@@ -1,0 +1,25 @@
+<div class="row">
+  <form name="userForm" ng-submit="updateUser()" novalidate>
+	<div class="form-group form-first">
+		<div class="alert form-tip" ng-class="{ 'alert-success': success, 'alert-danger': !success }" ng-show="show">{{ message }}</div>
+	</div>
+	<div class="form-group">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<img class="avatar" width="128" height="128" ng-src="{{ user.avatar }}" >
+			</div>
+		</div>
+	</div>
+    <div class="form-group">
+		<label for="avatar" class="form-tip">Avatar</label>
+		<input type="text" class="form-control" id="avatar" name="avatar" ng-model="user.avatar" value="{{ user.avatar }}" >
+	</div>
+	<div class="form-group">
+		<label class="form-tip">About Me</label>
+		<textarea class="form-control input-lg" rows="2" placeholder="about me" name="about_me" ng-model="user.about_me"></textarea>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-success btn-lg btn-block" ng-disabled="disabled">Submit</button>
+	</div>
+  </form>
+</div>

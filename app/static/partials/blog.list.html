@@ -1,0 +1,25 @@
+<div class="col-md-10 col-md-offset-1 content">
+  <article ng-repeat="blog in paginate.items" ng-if="paginate.items.length" ng-class="{ 'article-last': $last}">
+    <h2><a ui-sref="blog.detail({ blogId: blog.id })"  ng-if="blog.id">{{ blog.title }}</a></h2>
+	<p ng-bind-html="blog.content">{{ blog.content }}</p>
+	<div class="row article-tip">
+		<div class="col-md-4">
+			<span class="label label-success"><i class="glyphicon glyphicon-user"></i>{{ blog.author }}</span>
+		</div>
+		<div class="col-md-4 col-md-offset-4">
+			<span class="label label-default">{{ blog.create_at }}</span>	
+			<span class="label label-default">{{ blog.ccount }} comments</span>
+		</div>
+	</div>
+  </article>
+  <div class="row">
+	<ul class="pager">
+		<li class="previous" ng-class="{ 'disabled': !paginate.has_prev }">
+			<a href="javascript:void(0)" ng-click="prevBlog(paginate.prev_num)"><span aria-hidden="true">&larr;</span> Newer</a>
+		</li>
+		<li class="next" ng-class="{ 'disabled': !paginate.has_next }">
+			<a href="javascript:void(0)" ng-click="nextBlog(paginate.next_num)">Older<span aria-hidden="true">&rarr;</span></a>
+		</li>
+	</ul>
+  </div>
+</div>

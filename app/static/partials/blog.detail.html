@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+	<h1>{{ blog.title }}</h1>
+    <p class="blog-body" ng-bind-html="blog.content"></p>
+	<div class="row blog-tip">
+		<div class="col-md-8">
+			<span class="label label-success tag" ng-if="blog.tags.length">
+				<i class="glyphicon glyphicon-tags"></i> TAGS
+			</span>
+			<span class="tag" ng-repeat="tag in blog.tags">
+				<a ui-sref="tag-blogs({ tag: tag.id, page: 1 })">{{ tag.name }}</a>
+			</span>
+		</div>
+		<div class="col-md-2 col-md-offset-2">
+			<span class="label label-default">{{ blog.create_at }}</span>	
+		</div>
+	</div>
+    <div class="form-title">
+	    <fieldset>
+	      <legend class="form-tip">AUTHOR</legend>
+	      <div class="media">
+	      	<div class="media-left"><img class="media-object avatar" height="64" width="64" ng-src="{{ blog.author.avatar }}"></div>
+	      	<div class="media-body">
+	      	  <h4 class="media-heading">
+	      	  	{{ blog.author.username }}
+	      	  	<small><a ui-sref="user-blogs({ userId: blog.author.id, page:1 })">See more articles</a></small>
+	      	  </h4>
+	      	  <p>{{ blog.author.about_me }}</p>
+	      	</div>
+	      </div>
+	    </fieldset>
+    </div>
+	<div class="row">
+		<h3>{{ paginate.total }} COMMENTS</h3>
+		<hr />
+		<div class="media" ng-repeat="comment in paginate.items" ng-if="paginate.items.length">
+			<div class="media-left">
+				<img class="media-object avatar" height="32" width="32" ng-src="{{ comment.author.avatar }}">
+			</div>
+			<div class="media-body">
+				<h4 class="heading">{{ comment.author.username }}<span class="comment-date">{{ comment.create_at }}</span></h4>
+				<p>{{ comment.detail }}</p>
+			</div>
+		</div>
+		<ul class="pager">
+			<li ng-class="{ 'disabled': !paginate.has_prev }"><a href="javascript:void(0)" ng-click="prevComment()">Older</a></li>
+			<li ng-class="{ 'disabled': !paginate.has_next }"><a href="javascript:void(0)" ng-click="nextComment()">Newer</a></li>
+		</ul>
+		<form name="commentForm" ng-submit="addComment()" novalidate>
+			<div class="form-group form-title">
+				<h4>Add a new comment</h4>
+			</div>
+			<div class="form-group">
+				<textarea class="form-control input-lg" rows="3" placeholder="Join the discussion..." name="detail" ng-model="detail" required></textarea>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-success btn-lg btn-block"  ng-disabled="commentForm.$invalid">Submit</button>
+			</div>
+		</form>
+	</div>
+  </div>
+</div>

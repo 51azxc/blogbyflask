@@ -1,0 +1,25 @@
+<div class="col-md-10 col-md-offset-1">
+  <form name="blogForm" class="form-tip" ng-submit="createBlog()" novalidate>
+	<div ng-show="error" class="alert alert-danger">{{errorMessage}}</div>
+    <input type="hidden" ng-model="blog.id" value="{{ blog.id }}">
+    <div class="form-group form-first">
+		<label>Title</label>
+		<input type="text" class="form-control" name="title" ng-model="blog.title" required value="{{ blog.title }}">
+		<div class="alert alert-warning" ng-show="blogForm.title.$dirty && blogForm.title.$invalid">
+			<p class="form-tip" ng-show="blogForm.title.$error.required">Please input a title</p>
+		</div>
+    </div>
+	<div class="form-group">
+		<label>Tags</label>
+		<tags-input ng-model="blog.tags" display-property="name">
+			<auto-complete source="loadTags($query)"></auto-complete>
+		</tags-input>
+	</div>
+    <div class="form-group">
+		<text-angular ng-model="blog.content" required></text-angular>
+      </div>
+      <div class="form-group form-title">
+        <button type="submit" class="btn btn-default btn-lg btn-block" ng-disabled="blogForm.$invalid || disabled">Create</button>
+      </div>
+  </form>
+</div>

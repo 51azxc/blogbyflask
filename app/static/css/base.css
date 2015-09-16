@@ -1,0 +1,164 @@
+body {
+	font-size: 100%;
+}
+ 
+nav a {
+	font-size: 1.5rem;
+}
+ 
+.footer {
+	color: #D9EDF7;
+	background-color: #333333;
+	font-size: 15px;
+	padding: 25px 0px 0px;
+}
+
+.footer a {
+	padding: 2px 5px;
+	color: #969696;
+	line-height: 1em;
+	
+}
+ 
+section.parallax {
+  height: 70vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+section.parallax h4 {
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 70vh;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+section.parallax-1 {
+  background-image: url("http://www.1tong.com/uploads/wallpaper/landscapes/220-5-1920x1080.jpg");
+}
+
+.content {
+	font-style: inherit;
+	line-height: 2;
+	font-size: 2rem;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+}
+.content h2 {
+	font-size: 3rem;
+}
+
+article {
+	border-bottom: 1px solid #8F8686;
+	margin-bottom: 2em;
+}
+
+.content blockquote {
+	line-height: 1.2;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+article a {
+	font-weight: bold;
+}
+
+.blog-tip {
+	font-weight: bold;
+	font-size: 1.5rem;
+	margin-bottom: 1em;
+}
+
+.blog-body {
+	font-size: 2rem;
+	margin-bottom: 2em;
+	margin: 1em 0px;
+}
+
+.avatar {
+	border-radius: 50%;
+	border: 1px solid #959595;
+}
+
+.media p{
+	font-size: 1.2rem;
+	margin: 1em;
+}
+
+.ta-toolbar {
+	background-color: #F0F0F0;
+	padding: 10px 10px 5px;
+	margin-left: 0px; /* Override bootstrap */
+	border: 1px solid #EEE;
+}
+
+.ta-toolbar .btn-group {
+	margin-bottom: 5px;
+}
+
+.ta-editor, .white-box {
+	padding: 10px;
+	background-color: #FFF;
+	border: 1px solid #EEE;
+}
+
+textarea.ta-bind {
+	width: 100%;
+}
+
+.form-title {
+	margin-bottom: 2em;
+}
+
+.form-tip {
+	font-size: 1.25rem;
+}
+
+.form-link {
+	font-weight: bold;
+}
+
+.article-tip {
+	font-size: 0.8em;
+	font-weight: bold;
+	position: relative;
+	text-transform: uppercase;
+	margin-bottom: 1em;
+}
+
+.pager a {
+	font-size: 15px;
+}
+
+.comment-date {
+	float: right;
+	font-size: 1rem;
+}
+
+.form-login {
+	margin: 3em 0px;
+}
+
+.form-bottom-link {
+	text-align: center;
+}
+
+.form-first {
+	margin: 3em 0px;
+}
+
+.tag {
+	margin-left: 0.25em;
+	text-transform: uppercase;
+	padding-top: 0.5em;
+}
+
+.article-last {
+	border-bottom: 0px none;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "flaskblog",
+  "version": "0.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.13.4",
+    "angular-local-storage": ">=0.2",
+    "angular-ui-router": ">=0.2",
+    "angularjs": "~1.4.5",
+    "bootstrap": ">=3",
+    "ng-tags-input": "~3.0.0",
+    "restangular": ">=1.5.0",
+    "textAngular": "~1.4.3"
+  }
+}

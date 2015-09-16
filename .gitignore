@@ -1,0 +1,13 @@
+__pycache__/*
+/__pycache__
+*.db
+*.pyc
+db_repository/*
+/db_repository
+tmp/*
+/tmp
+env/*
+/env
+/app/static/bower_components
+/app/static/bower_components/*
+*.log
