@@ -6,6 +6,7 @@ from app.models import User, Blog, Comment, Tag
 import hashlib, json
 from datetime import datetime, timedelta
 from config import PAGE_SIZE
+from html.parser import HTMLParser
 
 @app.route('/')
 def index():
@@ -102,8 +103,20 @@ class AuthorFormat(fields.Raw):
     def format(self, user):
         return user.username
 
+class MyHTMLParser(HTMLParser):
+    def __init__(self):
+        HTMLParser.__init__(self)
+        self.content = []
+    # 获取网页中的文本内容
+    def handle_data(self, data):
+        self.content.append(data)
+
+# 去除网页中的标签
 class ContentFormat(fields.Raw):
     def format(self, content):
+        parser = MyHTMLParser()
+        parser.feed(content)
+        content = ' '.join(parser.content)
         if len(content) >= 150:
             content = content[0:147]+'...'
         return content
