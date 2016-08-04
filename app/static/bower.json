@@ -10,12 +10,12 @@
   ],
   "dependencies": {
     "angular-bootstrap": "~0.13.4",
-    "angular-local-storage": ">=0.2",
-    "angular-ui-router": ">=0.2",
-    "angularjs": "~1.4.5",
-    "bootstrap": ">=3",
+    "angular-ui-router": "~0.2.15",
+    "angular-local-storage": "~0.2.2",
+    "restangular": "~1.5.1",
+    "textAngular": "~1.4.3",
     "ng-tags-input": "~3.0.0",
-    "restangular": ">=1.5.0",
-    "textAngular": "~1.4.3"
+    "requirejs": "^2.2.0",
+    "bootstrap": "^3.3.7"
   }
 }

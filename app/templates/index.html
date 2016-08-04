@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
-    <head>
-        <meta charset="utf-8" />
-        <title>Blog</title>
-<!--
-        <link rel="stylesheet" type="text/css" href="/static/bower_components/bootstrap/dist/css/bootstrap.css">
+  <head>
+    <meta charset="utf-8" />
+    <title>Blog</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/bower_components/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="/static/bower_components/font-awesome/css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="/static/bower_components/textAngular/dist/textAngular.css">
 		<link rel="stylesheet" type="text/css" href="/static/bower_components/ng-tags-input/ng-tags-input.min.css">
--->
-
-		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/textAngular/1.4.4/textAngular.css">
-		<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/ng-tags-input/3.0.0/ng-tags-input.min.css">
 
 		<link rel="stylesheet" type="text/css" href="/static/css/base.css">
     </head>
@@ -135,7 +129,7 @@
 							<p class="form-tip" ng-show="registerForm.username.$error.unique">Username is taken, try another one</p>
 						</div>
 					</div>
-					<div class="form-group" ng-class="{'has-error': loginForm.password.$invalid && !loginForm.password.$pristine}">
+					<div class="form-group" ng-class="{'has-error': registerForm.password.$invalid && !registerForm.password.$pristine}">
 						<input type="password" class="form-control" ng-model="user.password" name="password" placeholder="password" required>
 						<div class="alert alert-warning" ng-show="registerForm.password.$dirty && registerForm.password.$invalid">
 							<p class="form-tip" ng-show="registerForm.password.$error.required">Password is required</p>
@@ -155,9 +149,8 @@
 			  </form>
 			</script>
 		</div>
-<!--
+
 		<script type="text/javascript" src="/static/bower_components/angular/angular.js"></script>
-		<script type="text/javascript" src="/static/bower_components/angular-animate/angular-animate.js"></script>
 		<script type="text/javascript" src="/static/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 		<script type="text/javascript" src="/static/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 		<script type="text/javascript" src="/static/bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
@@ -168,23 +161,13 @@
 		<script type="text/javascript" src="/static/bower_components/textAngular/dist/textAngular.js"></script>
 		<script type="text/javascript" src="/static/bower_components/textAngular/dist/textAngularSetup.js"></script>
 		<script type="text/javascript" src="/static/bower_components/ng-tags-input/ng-tags-input.js"></script>
--->
 
-		<script type="text/javascript" src="http://cdn.bootcss.com/angular.js/1.4.5/angular.min.js"></script>
-		<script type="text/javascript" src="http://cdn.bootcss.com/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js"></script>
-		<script type="text/javascript" src="http://cdn.bootcss.com/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-		<script type="text/javascript" src="http://cdn.bootcss.com/angular-local-storage/0.2.2/angular-local-storage.min.js"></script>
-		<script type="text/javascript" src="http://cdn.bootcss.com/lodash.js/3.10.1/lodash.min.js"></script>
-		<script type="text/javascript" src="http://cdn.bootcss.com/restangular/1.5.1/restangular.min.js"></script>
-		<script type="text/javascript" src="http://cdn.bootcss.com/textAngular/1.4.4/textAngular-rangy.min.js"></script>
-		<script type="text/javascript" src="http://cdn.bootcss.com/textAngular/1.4.4/textAngular-sanitize.min.js"></script>
-		<script type="text/javascript" src="http://cdn.bootcss.com/textAngular/1.4.4/textAngular.min.js"></script>
-		<script type="text/javascript" src="http://cdn.bootcss.com/textAngular/1.4.4/textAngularSetup.js"></script>
-		<script type="text/javascript" src="http://cdn.bootcss.com/ng-tags-input/3.0.0/ng-tags-input.min.js"></script>
-
-        <script type="text/javascript" src="/static/js/main.js"></script>
-        <script type="text/javascript" src="/static/js/service.js"></script>
-        <script type="text/javascript" src="/static/js/controller.js"></script>
+    <script type="text/javascript" src="/static/js/main.js"></script>
+    <script type="text/javascript" src="/static/js/service.js"></script>
+    <script type="text/javascript" src="/static/js/controller.js"></script>
 		<script type="text/javascript" src="/static/js/directive.js"></script>
+
+		<!--<script src="/static/bower_components/requirejs/require.js" data-main="/static/js/requirejs-style/main"></script>-->
+
     </body>
 </html>
